@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}about{% endblock title %}
+{% block content %}
+
+<h1>Name: {{name}}<h1>
+<h1>Email: {{email}}<h1>
+<h1>Rating: {{select}}<h1>
+
+<a href="{% url 'base' %}">base</a>
+{% endblock content %}

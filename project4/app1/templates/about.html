@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load tags1 %}
+{% block title %}about{% endblock title %}
+{% block page %}about{% endblock page %}
+{% block super %} {{block.super}} powerful/about 
+
+<h1>{{age|changeAge:'chang'}}</h1>
+
+{% table %}
+
+{% endblock super %}
+
+
