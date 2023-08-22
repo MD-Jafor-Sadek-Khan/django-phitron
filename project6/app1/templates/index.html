@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}home{% endblock title %}
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <td>Roll</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Fathers Name</td>
+        <td>Action</td>
+      </tr>
+    </thead>
+
+    <tbody>
+        {% for st in data %}
+        <tr class="table-active">
+            <td>{{st.roll}}</td>
+            <td>{{st.name}}</td>
+            <td>{{st.address}}</td>
+            <td>{{st.fathers_name}}</td>
+            <td><a href="{% url 'delete_student' st.roll %}" class="btn btn-danger text-white fw-bold">Delete</a><td>
+          </tr>
+        {% endfor %}
+      
+    </tbody>
+  </table>
+
+
+{% endblock content %}
